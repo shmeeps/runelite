@@ -125,13 +125,13 @@ public interface MenuEntrySwapperConfig extends Config
 
 	@ConfigItem(
 		position = 8,
-		keyName = "swapLastDestination",
-		name = "Last-destination (XXX)",
-		description = "Swap Zanaris with Last-destination on Fairy ring"
+		keyName = "swapFairyRing",
+		name = "Fairy ring",
+		description = "Swap Zanaris with Last-destination or Configure on Fairy rings"
 	)
-	default boolean swapLastDestination()
+	default FairyRingMode swapFairyRing()
 	{
-		return true;
+		return FairyRingMode.LAST_DESTINATION;
 	}
 
 	@ConfigItem(
@@ -218,6 +218,39 @@ public interface MenuEntrySwapperConfig extends Config
 		description = "Swap Talk-to with Claim Slime from Morytania diaries"
 	)
 	default boolean claimSlime()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 17,
+		keyName = "swapBirdhouseEmpty",
+		name = "Birdhouse",
+		description = "Swap Interact with Empty for birdhouses on Fossil Island"
+	)
+	default boolean swapBirdhouseEmpty()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 18,
+		keyName = "buyPass",
+		name = "Buy-Pass",
+		description = "Swap Trade with Buy-Pass when talking to Shantay"
+	)
+	default boolean buyPass()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 19,
+		keyName = "swapDarkMage",
+		name = "Dark Mage",
+		description = "Swap Talk-to with Reapirs when talking to the Dark Mage"
+	)
+	default boolean swapDarkMage()
 	{
 		return true;
 	}
